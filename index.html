@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+        <div id="wrap">
+            <h1>모달레이어 팝업</h1>
+            <div class="notice">
+                <div id="tapnotice"><div id="back">Tap1</div></div>
+                <div id="tapnotice2"><div id = back2>Tap2</div></div>
+                <button id="bt">Tap1의 내용</button>
+                </div>
+        </div>
+    <div id="modalback">
+        <div id="modal">
+            <div class="popUp">
+                <h2>Tap1의 내용<br>(모달레이어 팝업 실행완료!)</h2>
+            </div>
+            <div class="btn">
+                <button id = "close_btn" ><span>닫기</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+document.getElementById("bt").onclick = function(){
+document.getElementById("modalback").style.display="block";
+}
+document.getElementById("close_btn").onclick = function(){
+document.getElementById("modalback").style.display="none";
+}
+document.getElementById("back").onclick = function(){
+document.getElementById("tapnotice").style.backgroundColor="white";
+document.getElementById("tapnotice2").style.backgroundColor="gray";
+}
+document.getElementById("back2").onclick = function(){
+document.getElementById("tapnotice2").style.backgroundColor="white";
+document.getElementById("tapnotice").style.backgroundColor="gray";
+}
+
+function fnDisplay(){
+var layer = document.getElementById("modalback");
+layer.style.display="block";
+}
+function fnHidden(){
+var layer = document.getElementById("modalback");
+layer.style.display="none";
+}
+    </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(".notice button").click(function(){
+        $("div#modalback").css({"display":"block"});
+    });
+    $("#close_btn").click(function(){
+        $("div#modalback").css({"display":"none"});
+    });
+    </script>
+</body>
+</html>
